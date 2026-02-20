@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Accès Sécurisé</title>
+<style>
+body {
+  background-color: black;
+  color: #00ffcc;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 100px;
+}
+input {
+  padding: 10px;
+  font-size: 16px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>SERVEUR SÉCURISÉ</h1>
+<p>Entrez le code d'accès</p>
+
+<input type="password" id="pass" placeholder="Code">
+<br><br>
+<button onclick="check()">Valider</button>
+
+<script>
+function check() {
+  var code = document.getElementById("pass").value;
+  
+  if(code === "02022025") {   // <-- CHANGE ICI TON CODE
+    window.location.href = "secret.html";
+  } else {
+    alert("Code incorrect");
+  }
+}
+</script>
+
+</body>
+</html>
